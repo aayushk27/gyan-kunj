@@ -1,0 +1,18 @@
+.footer {
+  background-color: #959494;
+  color: white;
+  padding: 20px 0;
+  margin-left: -20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center; /* Center-align the text */
+}
+
+.footer-content {
+  padding: 0 20px;
+}
+
+.footer-left p {
+  margin: 0;
+}
