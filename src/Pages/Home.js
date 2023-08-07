@@ -26,6 +26,11 @@ const Home = () => {
 
     // You can also add any other jQuery functionality here if needed
   }, []);
+  const [circleColor, setCircleColor] = useState('red');
+
+  const handleButtonClick = () => {
+    setCircleColor(circleColor === 'red' ? 'green' : 'red');
+  };
 
   return (
     <div>
@@ -34,6 +39,17 @@ const Home = () => {
       </div>
       <div>
         <div id="includeContent"></div>
+      </div>
+      <div className="top-right-button">
+        <button className="color-button" onClick={handleButtonClick}>
+          <div
+            className="inner-circle"
+            style={{ backgroundColor: circleColor }}
+          />
+          <span className="circle-text">
+            {circleColor === 'red' ? 'Not Connected' : 'Connected'}
+          </span>
+        </button>
       </div>
       <div className="maincards">
         <div className="cards card1">
@@ -44,16 +60,10 @@ const Home = () => {
             <h1>User</h1>
           </div>
           <div className="des">
-            {/* <button>
-              <a href="/#">Login</a>
-            </button>
-            <button>
-              <a href="/#">SignUp</a>
-            </button> */}
-            <button>
+            <button className="loginButton">
               <Link to="/login">Login</Link>
             </button>
-            <button>
+            <button className="loginButton">
               <Link to="/signup">SignUp</Link>
             </button>
           </div>
@@ -72,10 +82,10 @@ const Home = () => {
             <button>
               <a href="/#">SignUp</a>
             </button> */}
-            <button>
+            <button className="loginButton">
               <Link to="/login">Login</Link>
             </button>
-            <button>
+            <button className="loginButton">
               <Link to="/signup">SignUp</Link>
             </button>
           </div>
