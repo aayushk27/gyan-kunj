@@ -41,6 +41,7 @@ button {
   background-color: #ffffff2e;
   color: #fff;
   font-family: poppins;
+  /* margin-left: -15px; */
   letter-spacing: 1px;
   text-indent: 35px;
   background-image: url(../../public/images/user.png);
@@ -77,4 +78,9 @@ button {
 .suggests .forgot {
   color: #b6b1b1;
   cursor: pointer;
+}
+
+.forgot:hover {
+  color: #e9e7e7;
+  transition: color 0.6s ease;
 }
