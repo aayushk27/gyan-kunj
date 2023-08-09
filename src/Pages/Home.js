@@ -4,28 +4,6 @@ import './home.css';
 import $ from 'jquery';
 
 const Home = () => {
-  // useEffect(() => {
-  //   const fetchAnimation = async () => {
-  //     try {
-  //       const response = await fetch('anim.html');
-  //       const data = await response.text();
-  //       const includedContentElement =
-  //         document.querySelector('#includedContent');
-  //       if (includedContentElement) {
-  //         includedContentElement.innerHTML = data;
-  //       }
-  //     } catch (error) {
-  //       console.error('Error loading animation:', error);
-  //     }
-  //   };
-
-  //   fetchAnimation();
-  // }, []);
-  useEffect(() => {
-    $('#includedContent').load('anim.html');
-
-    // You can also add any other jQuery functionality here if needed
-  }, []);
   const [circleColor, setCircleColor] = useState('red');
 
   const handleButtonClick = () => {
@@ -68,7 +46,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="cards card2">
+        {/* <div className="cards card2">
           <div className="image">
             <img src="/images/ins1.png" alt="ins1" />
           </div>
@@ -76,12 +54,6 @@ const Home = () => {
             <h1>Institution</h1>
           </div>
           <div className="des">
-            {/* <button>
-              <a href="/#">Login</a>
-            </button>
-            <button>
-              <a href="/#">SignUp</a>
-            </button> */}
             <button className="loginButton">
               <Link to="/login">Login</Link>
             </button>
@@ -89,7 +61,7 @@ const Home = () => {
               <Link to="/signup">SignUp</Link>
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

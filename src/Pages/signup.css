@@ -1,5 +1,5 @@
 body {
-  background-image: url(../../public/images/back2.jpg);
+  background-image: url(../../public/images/back2.jpg) ;
   background-size: cover;
   height: 97vh;
   display: flex;
@@ -73,7 +73,7 @@ button:hover {
   background-color: #b4b4b4;
 }
 .login input:focus {
-  outline: none;      /* Remove default outline and use border or box-shadow */
+  outline: none;  
   box-shadow: 0 0 0 2px rgb(212, 212, 212);
   transition: box-shadow 0.6s ease;
 }
@@ -86,8 +86,3 @@ button:hover {
   font-size: 16px;
   color: #fff;
 }
-/* 
-.suggests .forgot {
-  color: #b6b1b1;
-  cursor: pointer;
-} */

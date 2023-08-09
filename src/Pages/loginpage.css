@@ -1,5 +1,5 @@
 body {
-  background-image: url(../../public/images/back2.jpg);
+  background-image: url(../../public/images/back2.jpg) ;
   background-size: cover;
   height: 97vh;
   display: flex;
@@ -41,7 +41,6 @@ button {
   background-color: #ffffff2e;
   color: #fff;
   font-family: poppins;
-  /* margin-left: -15px; */
   letter-spacing: 1px;
   text-indent: 35px;
   background-image: url(../../public/images/user.png);

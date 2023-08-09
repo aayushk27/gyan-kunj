@@ -7,6 +7,7 @@ const Form = () => {
     organization: '',
     course: '',
     certificate: null,
+    aadharCardNumber: '',
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -40,7 +41,6 @@ const Form = () => {
   return (
     <div className="form-container">
       <h2>Form Component</h2>
-      <img src="$./user1.png$" alt="user1" />
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -76,7 +76,21 @@ const Form = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="certificate">Certificate:</label>
+          <label htmlFor="aadharCardNumber">Aadhar Card Number:</label>
+          <input
+            type="text"
+            id="aadharCardNumber"
+            name="aadharCardNumber"
+            value={formData.aadharCardNumber}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="certificate-form-group">
+          {/* Add the "certificate-label" class to the label */}
+          <label htmlFor="certificate" className="certificate-label">
+            Certificate:
+          </label>
           <input
             type="file"
             id="certificateInput"
@@ -96,6 +110,27 @@ const Form = () => {
             <span className="file-name">{formData.certificate.name}</span>
           )}
         </div>
+        {/* <div className="form-group">
+          <label htmlFor="certificate">Certificate:</label>
+          <input
+            type="file"
+            id="certificateInput"
+            name="certificate"
+            onChange={handleChange}
+            accept=".pdf,.jpg,.jpeg,.png"
+            style={{ display: 'none' }}
+          />
+          <button
+            type="button"
+            className="upload-button"
+            onClick={handleCertificateClick}
+          >
+            Upload Certificate
+          </button>
+          {formData.certificate && (
+            <span className="file-name">{formData.certificate.name}</span>
+          )}
+        </div> */}
         <button type="submit">Submit</button>
       </form>
     </div>
